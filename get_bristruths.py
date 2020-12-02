@@ -3,7 +3,7 @@ from facebook_scraper import get_posts
 
 posts_df = pd.DataFrame(columns=["id", "text", "likes", "comments"])
 
-for post in get_posts('Bristruths', pages=2500):
+for post in get_posts('Bristruths', pages=12000):
     if "https://bristruths.uni-truths.com/" not in post["text"]:
         text = post['text'].split("\n", 1)
         if len(text) >= 2:
